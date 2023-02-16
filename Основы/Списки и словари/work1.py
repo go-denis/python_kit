@@ -26,7 +26,6 @@ for i in set(list):
 print(f'{k} раз встречается в заданном списке число {x}')
 
 
-
 print(f'максимально близкое число {closest_num}')
 
 print(f'список {list}')

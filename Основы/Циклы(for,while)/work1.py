@@ -5,11 +5,27 @@
 2
 *
 """
+"""
+data = [1,2,3,5,8,15,23,38]
 
-n = int(input())
-k = 0
-for i in range(n):
-    v = int(input())
-    if v == 1:
-        k += 1
-print(k if k<n/2 else n-k)
+res = list()
+
+for i in data:
+    if i % 2 == 0:
+        res.append((i, i ** 2))
+print(res)
+"""
+
+def select(f, col):
+    return [f(x) for x in col]
+
+def where(f, col):
+    return [x for x in col if f(x)]
+
+data = [1,2,3,5,8,15,23,38]
+res  = select(int, data)
+print(res)
+res  = where(lambda x: x % 2 == 0, res)
+print(res)
+
+res = select(lambda x: (x, x ** 2), res)
