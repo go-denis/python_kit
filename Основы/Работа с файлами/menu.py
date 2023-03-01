@@ -11,9 +11,9 @@
 выход
 """
 
-import config
+from config import PhoneBook
 
-user_choice = config.menu()
-
+#user_choice = config.menu()
+pb = PhoneBook('Основы/Работа с файлами/phone_guide.txt')
 
 
