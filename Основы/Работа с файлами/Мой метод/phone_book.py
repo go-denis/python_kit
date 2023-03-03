@@ -1,6 +1,5 @@
 import os.path
 
-
 class PhoneBook:
     src = "Основы/Работа с файлами/phone_guide.txt"
 
@@ -8,39 +7,37 @@ class PhoneBook:
         self.path = path
         self.menu()
 
-    #Меню
-    def menu(self):
+   
+    def menu(self) -> input:
         print(
-        '1) Показать контакты\n'
-        '2) Добавить контакт \n'
-        '3) Найти контакт \n'
-        '4) Изменить контакт \n'
-        '5) Удалить контакт \n'
-        '6) Выход \n')
+            '1) Открыть файл\n'
+            '2) Сохранить файл \n'
+            '3) Найти контакт \n'
+            '4) Изменить контакт \n'
+            '5) Удалить контакт \n'
+            '6) Выход \n')
 
-        data = int(input('Введите номер действия: '))
-        match data:
+        choice = int(input('Введите номер действия: '))
+        match choice:
             case 1:
                 print('Открываю справочник...')
-                self.open_guide()
+                #self.open_guide()
             case 2:
                 print('Добавить контакт')
-                self.add_contacts_in_guaide()
+                #self.add_contacts_in_guaide()
             case 3:
                 print('Найти контакт')
-                self.search_contact()
+                #self.search_contact()
             case 4:
                 print('Изменить контакт')
-                self.replace_contact()
+                #self.replace_contact()
             case 5:
                 print('Удалить контакт')
-                self.del_contact()
+                #self.del_contact()
             case 6:
                 print('Выход...')
                 exit(1)
-        #return data
-
-
+                
     #Открытие записной книжки
     def open_guide(self):
         if (self.chek() == True):
@@ -185,4 +182,3 @@ class PhoneBook:
                     self.menu()
 
         return flag
-

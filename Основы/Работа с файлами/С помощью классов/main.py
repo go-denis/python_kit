@@ -11,9 +11,10 @@
 выход
 """
 
-from config import PhoneBook
+import controller
 
-#user_choice = config.menu()
-pb = PhoneBook('Основы/Работа с файлами/phone_guide.txt')
+if __name__ == '__main__':
+    controller.start()
+
 
 
