@@ -13,8 +13,11 @@ def menu() -> input:
         '7) Удалить контакт \n'
         '8) Выход \n')
 
-    choice = int(input('Введите номер действия: '))
-    return choice
+    while True:
+        choice = int(input('Введите номер действия: '))
+        if choice.isdigit() and (0 < int(choice) < 9):
+         
+            return int(choice)
 
 def show_contact(phone_book: list[dict]):
     print()
